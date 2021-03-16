@@ -50,9 +50,7 @@
                 type="primary"
                 @click="onChange"
                 :loading="btnLoading"
-              >
-                保存设置
-              </el-button>
+              >保存设置</el-button>
             </el-form-item>
           </el-form>
         </div>
