@@ -108,7 +108,6 @@ export default {
       this.btnLoading = true
       onLogin(this.user).then(res => {
         // 登录成功
-        // console.log(res)
         this.$message({
           showClose: true,
           message: '恭喜你，登录成功',
@@ -159,7 +158,7 @@ export default {
     // logo
     .loginTitle {
       text-align: center;
-      color: #409EFF;
+      color: #3a9cff;
       padding-bottom: 10px;
     }
     // 协议
