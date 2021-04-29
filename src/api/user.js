@@ -6,7 +6,10 @@
 
 import request from '@/utils/request.js'
 
-// 登录
+/**
+ * 登录
+ * @param {Object} data 用户信息
+ */
 export const onLogin = data => {
   return request({
     method: 'POST',
@@ -15,7 +18,9 @@ export const onLogin = data => {
   })
 }
 
-// 获取用户信息
+/**
+ * 获取用户信息
+ */
 export const getProfile = () => {
   return request({
     method: 'GET',
@@ -23,7 +28,9 @@ export const getProfile = () => {
   })
 }
 
-// 获取粉丝列表
+/**
+ * 取粉丝列表
+ */
 export const getFollowers = () => {
   return request({
     method: 'GET',
@@ -31,7 +38,9 @@ export const getFollowers = () => {
   })
 }
 
-// 获取用户个人资料
+/**
+ * 获取用户个人资料
+ */
 export const getUserInfo = () => {
   return request({
     method: 'GET',
@@ -39,7 +48,10 @@ export const getUserInfo = () => {
   })
 }
 
-// 编辑用户个人资料
+/**
+ * 编辑用户个人资料
+ * @param {Object} data 新的用户信息
+ */
 export const changUserInfo = data => {
   return request({
     method: 'PATCH',
@@ -48,7 +60,10 @@ export const changUserInfo = data => {
   })
 }
 
-// 编辑用户头像
+/**
+ * 编辑用户头像
+ * @param {Object} data 用户头像
+ */
 export const changUserPhoto = data => {
   return request({
     method: 'PATCH',

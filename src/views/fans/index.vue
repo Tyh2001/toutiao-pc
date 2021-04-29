@@ -75,7 +75,6 @@ export default {
       const { data } = await getFollowers() // 获取粉丝列表
       this.fansList = data.data.results // 获取粉丝列表
       this.total_count = data.data.total_count // 粉丝数量
-      // console.log(data)
     }
   }
 }

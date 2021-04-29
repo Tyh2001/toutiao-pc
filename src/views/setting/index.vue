@@ -148,7 +148,6 @@ export default {
     // 获取用户个人资料
     async loadgetUserInfo () {
       const { data } = await getUserInfo()
-      // console.log(data)
       this.userInfo = data.data
       // 将个人信息存储到 Vuex容器中
       this.$store.commit('changeName', this.userInfo.name)
@@ -169,7 +168,6 @@ export default {
       await changUserInfo(this.userInfo)
       // 将用户个人信息存储到 vuex 容器中 方便头部导航栏实时更新数据
       this.$store.commit('changeName', this.userInfo.name)
-      // console.log(data)
       this.$message({
         showClose: true,
         message: '更新资料成功！',
@@ -181,7 +179,6 @@ export default {
     photoOnChange () {
       const file = this.$refs['file-inp']
       const blob = window.URL.createObjectURL(file.files[0])
-      // console.log(blob)
       this.photoBlob = blob
       this.dialogVisible = true // 模态框显示
     },
@@ -203,14 +200,11 @@ export default {
       this.btnLoading = true
       // getCroppedCanvas().toBlob(filePhoto => {}) 这个方法可以直接获取裁剪后的对象 可以直接传递给后端
       this.cropper.getCroppedCanvas().toBlob(filePhoto => {
-        // console.log(filePhoto)
         const fd = new FormData()
         fd.append('photo', filePhoto)
         // const { data } = changUserPhoto(fd)
         changUserPhoto(fd).then(res => {
-          // console.log(res)
           // 更新视图显示
-          // this.userInfo.photo = res.data.data.photo
           this.userInfo.photo = window.URL.createObjectURL(filePhoto)
           this.$store.commit('changePhoto', this.userInfo.photo)
           // 将用户个人信息存储到 vuex 容器中 方便头部导航栏实时更新数据

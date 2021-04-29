@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- 首页 -->
     <el-card class="box-card">
       <!-- 面包屑 -->
       <div slot="header" class="clearfix">
@@ -8,21 +7,26 @@
           <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
-      <div class="text item">
-      </div>
+      <div class="text item">欢迎登录</div>
     </el-card>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'homeIndex',
+  components: {},
+  props: {},
+  data () {
+    return {}
+  },
+  computed: {},
+  watch: {},
+  created () {},
+  mounted () {},
+  methods: {}
+}
 </script>
 
-<style lang="less" scoped>
-.item {
-  height: 500px;
-  background-image: url('./image/welcome.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
+<style lang='less' scoped>
 </style>

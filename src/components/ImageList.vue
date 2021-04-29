@@ -159,7 +159,6 @@ export default {
         page,
         per_page: this.per_page
       })
-      // console.log(data)
       this.images = data.data.results // 获取图片素材
       this.total_count = data.data.total_count // 获取图片素材总数
       this.disabled = false

@@ -33,9 +33,6 @@
           </el-form-item>
 
           <!-- 内容 -->
-          <!-- <el-form-item label="内容：" prop="content">
-            <el-input type="textarea" v-model="publish.content"></el-input>
-          </el-form-item> -->
           <el-form-item label="内容：" prop="content">
             <el-tiptap
               v-model="publish.content"
@@ -139,11 +136,6 @@ export default {
     CoverImg // 封面上传组件
   },
   data () {
-    // const contentText = (rule, value, callback) => {
-    //   if (value === '' || value === '<p></p>') {
-    //     return callback(new Error('内容必填'))
-    //   }
-    // }
     return {
       channels: [], // 频道列表
       publish: {
@@ -229,7 +221,6 @@ export default {
           this.publish,
           false
         ).then(res => {
-          // console.log(res)
           this.$message({
             showClose: true,
             message: '恭喜你，修改成功！',
@@ -240,7 +231,6 @@ export default {
       } else {
         // 否则就执行发布文章操作
         addArticles(this.publish).then(res => {
-          // console.log(res)
           this.$message({
             showClose: true,
             message: '恭喜你，发布成功！',
@@ -260,7 +250,6 @@ export default {
     // 获取指定文章
     async loadgetArticleItem () {
       const { data } = await getArticleItem(this.$route.query.id)
-      // console.log(data)
       this.publish = data.data // 内容
     },
     // 需要上传的图片

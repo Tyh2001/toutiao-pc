@@ -29,7 +29,7 @@
         <!-- 同意协议 -->
         <el-form-item prop="agreement">
           <el-checkbox-group v-model="user.agreement" class="agreement">
-            <el-checkbox label="" name="type">我已阅读并同意用户协议和隐私条款</el-checkbox>
+            <el-checkbox label="" name="type">我已阅读并同意用户协议</el-checkbox>
           </el-checkbox-group>
         </el-form-item>
 
@@ -139,7 +139,7 @@ export default {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-image: url('./image/login_bg.jpg');
+  background-image: url('./image/login.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -152,7 +152,8 @@ export default {
     right: 0px;
     bottom: 0px;
     margin: auto;
-    background-color: #fff;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
     padding: 40px;
     // logo

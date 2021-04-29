@@ -1,19 +1,3 @@
 ### 在线网站
 
-http://toutiaopc.tianyuhao.icu
-
-
-## 安装依赖
-```
-npm install
-```
-
-### 启动项目
-```
-npm run serve
-```
-
-### 打包
-```
-npm run build
-```
+http://article.tianyuhao.icu

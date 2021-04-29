@@ -12,10 +12,7 @@
 
         <!-- 头部 -->
         <el-header>
-          <span>
-            <i class="el-icon-s-fold" />
-            文章发布后台管理系统
-          </span>
+          <span>盛邦文章发布系统</span>
 
           <!-- 用户信息 下拉菜单 -->
           <el-dropdown trigger="click">
