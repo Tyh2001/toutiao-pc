@@ -1,9 +1,6 @@
 <template>
   <div id="CoverImg" @click="addd">
-    <img
-      class="UpImage"
-      :src="UpImage ? UpImage : coverImg"
-    >
+    <img class="UpImage" :src="UpImage ? UpImage : coverImg" />
     <el-dialog
       id="dialogImgList"
       title="选择封面"
@@ -12,7 +9,6 @@
       :append-to-body="true"
     >
       <el-tabs v-model="activeName" type="card">
-
         <!-- 素材库 -->
         <el-tab-pane label="素材库" name="first">
           <ImageList
@@ -38,7 +34,7 @@
             <i class="el-icon-plus"></i>
           </el-upload>
           <el-dialog visible.sync="true">
-            <img width="100%" :src="dialogImageUrl" alt="">
+            <img width="100%" :src="dialogImageUrl" alt="" />
           </el-dialog>
         </el-tab-pane>
       </el-tabs>

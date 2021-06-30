@@ -22,13 +22,7 @@
             >
               <el-avatar :src="fan.photo"></el-avatar>
               <p>{{ fan.name }}</p>
-              <el-button
-                type="primary"
-                size="mini"
-                plain
-              >
-                关注
-              </el-button>
+              <el-button type="primary" size="mini" plain> 关注 </el-button>
             </el-card>
             <!-- 分页器 -->
             <el-pagination

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="list-fans" style="width: 600px;height:400px;"></div>
+    <div ref="list-fans" style="width: 600px; height: 400px"></div>
   </div>
 </template>
 

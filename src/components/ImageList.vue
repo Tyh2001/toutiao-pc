@@ -1,37 +1,18 @@
 <template>
   <div>
     <div class="operation">
-      <el-radio-group
-        v-model="isCollapse"
-        @change="onloadChange"
-      >
-        <el-radio-button
-          :label="true"
-        >
-          全部
-        </el-radio-button>
-        <el-radio-button
-          :label="false"
-        >
-          收藏
-        </el-radio-button>
+      <el-radio-group v-model="isCollapse" @change="onloadChange">
+        <el-radio-button :label="true"> 全部 </el-radio-button>
+        <el-radio-button :label="false"> 收藏 </el-radio-button>
       </el-radio-group>
 
       <!-- 添加素材 -->
-      <el-button
-        type="success"
-        v-if="addImage"
-        @click="dialogVisible = true"
-      >
+      <el-button type="success" v-if="addImage" @click="dialogVisible = true">
         添加素材
       </el-button>
     </div>
     <!-- 全部图片素材 -->
-    <div
-      class="ImageSource"
-      v-for="(img, index) in images"
-      :key="index"
-    >
+    <div class="ImageSource" v-for="(img, index) in images" :key="index">
       <el-image
         :src="img.url"
         fit="cover"
@@ -39,10 +20,7 @@
       />
       <!-- 文章选中状态的图标 -->
       <template v-if="choiceImg">
-        <div
-          v-if="sourceIndex === index"
-          class="choiceImg"
-        />
+        <div v-if="sourceIndex === index" class="choiceImg" />
       </template>
       <div class="option" v-if="showOperation">
         <!-- 收藏 -->
@@ -56,12 +34,7 @@
           @click="Collection(img)"
         />
         <!-- 删除 -->
-        <el-button
-          type="danger"
-          icon="el-icon-delete"
-          size="mini"
-          circle
-        />
+        <el-button type="danger" icon="el-icon-delete" size="mini" circle />
       </div>
     </div>
 
@@ -84,7 +57,7 @@
       :before-close="handleClose"
       :append-to-body="true"
     >
-      <div style="width: 148px; margin: auto;">
+      <div style="width: 148px; margin: auto">
         <el-upload
           action="http://api-toutiao-web.itheima.net/mp/v1_0/user/images"
           name="image"
@@ -98,9 +71,8 @@
         </el-upload>
       </div>
       <el-dialog :visible.sync="upDialogVisible">
-        <img width="100%" :src="dialogImageUrl" alt="">
+        <img width="100%" :src="dialogImageUrl" alt="" />
       </el-dialog>
-
     </el-dialog>
   </div>
 </template>

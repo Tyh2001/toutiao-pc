@@ -2,14 +2,12 @@
   <div>
     <!-- 模板组件 -->
     <el-container>
-
       <!-- 侧边栏 -->
       <el-aside width="auto">
         <Sidebar />
       </el-aside>
 
       <el-container>
-
         <!-- 头部 -->
         <el-header>
           <span>盛邦文章发布系统</span>
@@ -21,7 +19,7 @@
               <img
                 class="userPhoto"
                 :src="$store.state.photo ? $store.state.photo : userInfo.photo"
-              >
+              />
               <!-- 用户昵称 -->
               <div style="padding-left: 10px">
                 {{ $store.state.name ? $store.state.name : userInfo.name }}
@@ -29,12 +27,12 @@
               </div>
             </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item
-                @click.native="$router.push('/setting')"
-              >
+              <el-dropdown-item @click.native="$router.push('/setting')">
                 个人设置
               </el-dropdown-item>
-              <el-dropdown-item @click.native="outLogin">退出登录</el-dropdown-item>
+              <el-dropdown-item @click.native="outLogin"
+                >退出登录</el-dropdown-item
+              >
             </el-dropdown-menu>
           </el-dropdown>
         </el-header>
@@ -43,7 +41,6 @@
         <el-main>
           <router-view />
         </el-main>
-
       </el-container>
     </el-container>
   </div>

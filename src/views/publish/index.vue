@@ -6,16 +6,10 @@
       <div slot="header" class="clearfix">
         <el-breadcrumb separator="/">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item
-            v-if="!$route.query.id"
-          >
+          <el-breadcrumb-item v-if="!$route.query.id">
             发布文章
           </el-breadcrumb-item>
-          <el-breadcrumb-item
-            v-else
-          >
-            修改文章
-          </el-breadcrumb-item>
+          <el-breadcrumb-item v-else> 修改文章 </el-breadcrumb-item>
         </el-breadcrumb>
       </div>
 
@@ -49,7 +43,7 @@
               <el-radio :label="0" @click.native="radio(0)">无图</el-radio>
               <el-radio :label="-1" @click.native="radio(-1)">自动</el-radio>
             </el-radio-group>
-            <br>
+            <br />
             <template v-if="publish.cover.type > 0">
               <CoverImg
                 v-for="(type, index) in publish.cover.type"
@@ -73,30 +67,15 @@
           </el-form-item>
 
           <!-- 发表按钮 -->
-          <el-form-item
-            v-if="!$route.query.id"
-          >
-            <el-button
-              type="primary"
-              @click="releaseArticle"
-            >
-              发表
-            </el-button>
+          <el-form-item v-if="!$route.query.id">
+            <el-button type="primary" @click="releaseArticle"> 发表 </el-button>
             <el-button>存入草稿</el-button>
           </el-form-item>
 
           <!-- 修改按钮 -->
-          <el-form-item
-            v-else
-          >
-            <el-button
-              type="success"
-              @click="releaseArticle"
-            >
-              修改
-            </el-button>
+          <el-form-item v-else>
+            <el-button type="success" @click="releaseArticle"> 修改 </el-button>
           </el-form-item>
-
         </el-form>
       </div>
     </el-card>

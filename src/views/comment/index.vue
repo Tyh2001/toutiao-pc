@@ -20,10 +20,7 @@
           v-loading="tableLoading"
         >
           <!-- 标题 -->
-          <el-table-column
-            prop="title"
-            label="标题"
-          />
+          <el-table-column prop="title" label="标题" />
 
           <!-- 总评论论数 -->
           <el-table-column
@@ -40,17 +37,10 @@
           />
 
           <!-- 状态 -->
-          <el-table-column
-            prop="comment_status"
-            label="状态"
-            width="150"
-          />
+          <el-table-column prop="comment_status" label="状态" width="150" />
 
           <!-- 操作 -->
-          <el-table-column
-            label="操作"
-            width="150"
-          >
+          <el-table-column label="操作" width="150">
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.comment_status"

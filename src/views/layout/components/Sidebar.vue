@@ -1,6 +1,6 @@
 <template>
   <div>
-     <el-menu
+    <el-menu
       :default-active="$route.path"
       class="el-menu-vertical-demo"
       router
@@ -43,7 +43,6 @@
         <i class="el-icon-s-tools"></i>
         <span slot="title">个人设置</span>
       </el-menu-item>
-
     </el-menu>
   </div>
 </template>

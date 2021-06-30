@@ -50,7 +50,8 @@
                 type="primary"
                 @click="onChange"
                 :loading="btnLoading"
-              >保存设置</el-button>
+                >保存设置</el-button
+              >
             </el-form-item>
           </el-form>
         </div>
@@ -71,7 +72,7 @@
           hidden
           accept="image/*"
           @change="photoOnChange"
-        >
+        />
 
         <!-- 头像裁切的模态框 -->
         <el-dialog
@@ -83,11 +84,7 @@
           @closed="reomveOpened"
         >
           <div>
-            <img
-              :src="photoBlob"
-              class="changeUserPhoto"
-              ref="user-photo"
-            />
+            <img :src="photoBlob" class="changeUserPhoto" ref="user-photo" />
           </div>
           <span slot="footer" class="dialog-footer">
             <el-button @click="dialogVisible = false">取 消</el-button>

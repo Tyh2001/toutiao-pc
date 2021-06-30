@@ -3,11 +3,7 @@
     <!-- 登录页面 -->
     <div class="loginBox">
       <h2 class="loginTitle">登录</h2>
-      <el-form
-        :model="user"
-        :rules="userRules"
-        ref="login-form"
-      >
+      <el-form :model="user" :rules="userRules" ref="login-form">
         <!-- 手机号 -->
         <el-form-item prop="mobile">
           <el-input
@@ -29,17 +25,15 @@
         <!-- 同意协议 -->
         <el-form-item prop="agreement">
           <el-checkbox-group v-model="user.agreement" class="agreement">
-            <el-checkbox label="" name="type">我已阅读并同意用户协议</el-checkbox>
+            <el-checkbox label="" name="type"
+              >我已阅读并同意用户协议</el-checkbox
+            >
           </el-checkbox-group>
         </el-form-item>
 
         <!-- 登录按钮 -->
         <el-form-item>
-          <el-button
-            type="primary"
-            @click="userOnLogin"
-            :loading="btnLoading"
-          >
+          <el-button type="primary" @click="userOnLogin" :loading="btnLoading">
             登录
           </el-button>
         </el-form-item>
@@ -139,7 +133,7 @@ export default {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-image: url('./image/login.jpg');
+  background-image: url("./image/login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -172,5 +166,4 @@ export default {
     }
   }
 }
-
 </style>

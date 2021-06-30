@@ -10,11 +10,7 @@
         </el-breadcrumb>
       </div>
       <div class="text item">
-        <ImageList
-          :showOperation="true"
-          :addImage="true"
-          :choiceImg="false"
-        />
+        <ImageList :showOperation="true" :addImage="true" :choiceImg="false" />
       </div>
     </el-card>
   </div>
@@ -32,5 +28,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 </style>

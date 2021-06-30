@@ -11,7 +11,6 @@
       <!-- 表单 -->
       <div class="text item">
         <el-form label-width="80px">
-
           <el-form-item label="状态：">
             <el-radio-group v-model="state">
               <el-radio :label="null">全部</el-radio>
@@ -25,10 +24,7 @@
 
           <el-form-item label="频道：">
             <el-select v-model="channelId" placeholder="请选择">
-               <el-option
-                label="全部"
-                :value="null"
-              />
+              <el-option label="全部" :value="null" />
               <el-option
                 v-for="(channel, index) in channels"
                 :label="channel.name"
@@ -61,7 +57,6 @@
           </el-form-item>
         </el-form>
       </div>
-
     </el-card>
 
     <!-- 下面表格部分 -->
@@ -78,11 +73,7 @@
           v-loading="tableLoading"
         >
           <!-- 封面 -->
-          <el-table-column
-            prop="date"
-            label="封面"
-            width="180"
-          >
+          <el-table-column prop="date" label="封面" width="180">
             <template slot-scope="scope">
               <el-image
                 style="width: 170px; height: 100px"
@@ -94,16 +85,10 @@
           </el-table-column>
 
           <!-- 标题 -->
-          <el-table-column
-            prop="title"
-            label="标题"
-          />
+          <el-table-column prop="title" label="标题" />
 
           <!-- 状态 -->
-          <el-table-column
-            label="状态"
-            width="100"
-          >
+          <el-table-column label="状态" width="100">
             <template slot-scope="scope">
               <el-button
                 :type="stateBtn[scope.row.status].type"
@@ -116,17 +101,10 @@
           </el-table-column>
 
           <!-- 发布时间 -->
-          <el-table-column
-            prop="pubdate"
-            label="发布时间"
-            width="180"
-          />
+          <el-table-column prop="pubdate" label="发布时间" width="180" />
 
           <!-- 操作 -->
-          <el-table-column
-            label="操作"
-            width="150"
-          >
+          <el-table-column label="操作" width="150">
             <!-- 删除 -->
             <template slot-scope="scope">
               <el-button
