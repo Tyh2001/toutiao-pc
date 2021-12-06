@@ -28,9 +28,5 @@ export default new Vuex.Store({
     changePhoto (state, photo) {
       state.photo = photo
     }
-  },
-
-  actions: {},
-
-  modules: {}
+  }
 })

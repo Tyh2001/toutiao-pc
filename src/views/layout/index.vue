@@ -10,7 +10,7 @@
       <el-container>
         <!-- 头部 -->
         <el-header>
-          <span>盛邦文章发布系统</span>
+          <span>黑马头条管理系统</span>
 
           <!-- 用户信息 下拉菜单 -->
           <el-dropdown trigger="click">
@@ -30,9 +30,9 @@
               <el-dropdown-item @click.native="$router.push('/setting')">
                 个人设置
               </el-dropdown-item>
-              <el-dropdown-item @click.native="outLogin"
-                >退出登录</el-dropdown-item
-              >
+              <el-dropdown-item @click.native="outLogin">
+                退出登录
+              </el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </el-header>
